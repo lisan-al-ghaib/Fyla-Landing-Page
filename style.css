@@ -52,14 +52,10 @@ table {
   Custom styles
   ========================================
 */
-html{
-  font-size: 62.5%;
-}
-
 body {
-  /* font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  font-family: Roboto, serif;
-  font-size: 1.6rem;
+  font: 300 16px/24px "Open Sans", sans-serif;
+  background:  hsl(218, 28%, 13%);
+  color: white;
 }
 
 /*
@@ -71,12 +67,12 @@ body {
     box-sizing: border-box;
 }
 .container{
-  max-width: 1360px;
+  max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
 }
 .section-padding{
-  padding: 5rem 0;
+  padding: 4em 0;
 }
 
 
@@ -85,7 +81,6 @@ body {
   Clearfix
   ========================================
 */
-
 .group:before,
 .group:after {
   content: "";
@@ -104,11 +99,230 @@ body {
   Typography
   ========================================
 */
-
-div{
-  border: 2px solid hotpink;
-  height: 500px;
-  width: 300px;
-  margin: auto auto;
+h1{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 45px;
+}
+h2{
+  font-size: 20px;
+  font-weight: 700;
 }
 
+
+/*
+  ========================================
+  PRIMARY HEADER
+  ========================================
+*/
+header nav,
+header ul{
+  display: flex;
+}
+header nav{
+  justify-content: space-between;
+}
+header ul{
+  gap: 50px;
+}
+
+
+/*
+  ========================================
+  BODY
+  ========================================
+*/
+.intro img{
+  width: 50%;
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.intro p{
+  text-align: center;
+}
+.intro a{
+  width: 250px;
+}
+
+
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.features > section{
+  flex: 1 1 400px;
+  padding: 2em 6em;
+  text-align: center;
+}
+.features section *{
+  margin-bottom: 10px;
+}
+.features section img{
+  height:80px;
+  margin-bottom: 30px;
+}
+
+
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about > div{
+  flex: 1 1 400px;
+  padding: 1em;
+}
+.about .description{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.about .description a{
+  color: hsl(176, 68%, 64%);
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  align-self: baseline;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.about h2{
+  font-size: 36px;
+  line-height: 1;
+}
+
+
+
+.testimonials{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.testimonials > *{
+  flex: 1 1 300px;
+  padding: 3em 1.5em;
+  background: hsl(219, 30%, 18%);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.testimonials img{
+  border-radius: 50%;
+  width: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.testimonials > div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.sign-up > div{
+  max-width: 800px;
+  margin: 0 auto;
+  /* border: 1px solid hotpink; */
+  text-align: center;
+  padding: 2em 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 5px;
+  background: hsl(217, 28%, 15%);
+}
+.sign-up h2{
+  font-size: 30px;
+}
+.sign-up .email-form input{
+  border-radius: 30px;
+  border: none;
+  padding: 10px 0;
+  flex-grow: 3;
+}
+.sign-up div div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sign-up .email-form > *{
+  flex-grow: 1;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%));
+  color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 1em 2em;
+  border: none;
+}
+.sign-up > div{
+  position: relative;
+  top: 100px;
+}
+.email-form input{
+  flex-basis: 300px;
+}
+.email-form button{
+  flex-basis: 130px;
+}
+
+
+/*
+  ========================================
+  Primary footer
+  ========================================
+*/
+footer{
+  display: flex;
+  justify-content: space-between;
+}
+footer > div{
+  width: 30%;
+}
+footer div div{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+footer .social-links{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.primary-footer{
+  padding: 10em 0;
+}
+.footer-background{
+  background: hsl(216, 53%, 9%);
+}
+.primary-footer .font{
+  width: 20px;
+}
+.primary-footer .contact li{
+  display: flex;
+  gap: 10px;
+}
+.primary-footer .logo{
+  padding-bottom: 30px;
+}
